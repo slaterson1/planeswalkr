@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160418181152) do
+ActiveRecord::Schema.define(version: 20160418181332) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -37,7 +37,7 @@ ActiveRecord::Schema.define(version: 20160418181152) do
     t.string   "artist"
     t.string   "power"
     t.string   "toughness"
-    t.integer  "set_id"
+    t.integer  "card_set_id"
     t.string   "card_number"
     t.string   "colors"
     t.datetime "created_at",     null: false
