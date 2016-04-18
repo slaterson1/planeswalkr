@@ -1,0 +1,14 @@
+<h1>New User</h1>
+
+<%= form_for(@user) do %>
+    <%= f.label "Full Name" %>
+    <%= f.text_field_tag :full_name %>
+
+    <%= f.label "Email" %>
+    <%= f.text_field_tag :email %>
+
+    <%= f.label "Password" %>
+    <%= f.password_field_tag :password %>
+
+    <%= f.button "Submit" %>
+<% end %>
