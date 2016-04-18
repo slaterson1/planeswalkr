@@ -1,0 +1,8 @@
+<h1>Import Cardset</h1>
+
+<%= form_tag(cardsets_path, multipart: true) do %>
+    <%= label_tag("Set MtG JSON File") %>
+    <%= file_field_tag(:cardset) %>
+
+    <%= button_tag("Submit") %>
+<% end %>
