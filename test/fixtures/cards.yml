@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  mana_cost: MyString
+  converted_cost: 1
+  card_type: MyString
+  rarity: MyString
+  text: MyText
+  flavor: MyText
+  artist: MyString
+  power: MyString
+  toughness: MyString
+  set_id: 1
+  card_number: MyString
+  colors: MyString
+
+two:
+  name: MyString
+  mana_cost: MyString
+  converted_cost: 1
+  card_type: MyString
+  rarity: MyString
+  text: MyText
+  flavor: MyText
+  artist: MyString
+  power: MyString
+  toughness: MyString
+  set_id: 1
+  card_number: MyString
+  colors: MyString
