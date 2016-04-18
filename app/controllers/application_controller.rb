@@ -15,4 +15,11 @@ class ApplicationController < ActionController::Base
       redirect_to root_path
     end
   end
+
+  def administrate!
+    unless current_user && current_user.admin?
+      flash[:notice] = "This portion of the site is for admins only. Sorry."
+      redirect_to root_path
+    end
+  end
 end
