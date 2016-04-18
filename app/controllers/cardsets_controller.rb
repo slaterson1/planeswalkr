@@ -20,18 +20,7 @@ class CardsetsController < ApplicationController
                          release_date: DateTime.parse(data["releaseDate"]),
                          block: data["block"])
       @cards = data["cards"].map do |card|
-        Card.new(name: card["name"],
-                 mana_cost: card["manaCost"],
-                 converted_cost: card["cmc"],
-                 card_type: card["type"],
-                 rarity: card["rarity"],
-                 text: card["text"],
-                 flavor: card["flavor"],
-                 artist: card["artist"],
-                 power: card["power"],
-                 toughness: card["toughness"],
-                 card_number: card["mciNumber"],
-                 colors: card["colors"])
+        Card.import_from_json(card)
       end
       @set.cards = @cards
       @set.save
