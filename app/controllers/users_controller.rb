@@ -13,6 +13,10 @@ class UsersController < ApplicationController
     end
   end
 
+  def index
+    render :index
+  end
+
   private
   def user_params
     params.permit(:full_name, :email, :password)
