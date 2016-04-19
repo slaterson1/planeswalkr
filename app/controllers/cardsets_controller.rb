@@ -29,6 +29,11 @@ class CardsetsController < ApplicationController
     redirect_to root_path
   end
 
+  def index
+    @cardset = CardSet.all
+    render :index
+  end
+
   def show
     @cardset = CardSet.find_by!(code: params[:id])
     render :show
