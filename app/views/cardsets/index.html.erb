@@ -15,5 +15,3 @@
 </ul>
 
 <%= link_to("Homepage", root_path) %>
-<% scope = CardSet.all.page(params[:page]).per(10) %>
-  <%= paginate(scope) %>
