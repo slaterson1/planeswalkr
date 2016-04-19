@@ -1,5 +1,5 @@
 class AddSuperTypesColumnToCards < ActiveRecord::Migration
   def change
-    add_column :cards, :supertypes, :string, array: true
+    add_column :cards, :supertypes, :text, array: true
   end
 end

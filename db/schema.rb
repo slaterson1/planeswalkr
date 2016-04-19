@@ -44,7 +44,7 @@ ActiveRecord::Schema.define(version: 20160419161553) do
     t.datetime "updated_at",     null: false
     t.text     "colors",                      array: true
     t.integer  "subtypes",                    array: true
-    t.string   "supertypes",                  array: true
+    t.text     "supertypes",                  array: true
   end
 
   create_table "users", force: :cascade do |t|
