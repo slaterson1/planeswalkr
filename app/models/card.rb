@@ -1,6 +1,12 @@
 class Card < ActiveRecord::Base
   belongs_to :card_set
 
+  IMAGE_BASE_URI = "https://s3.amazonaws.com/images.planeswalker.io"
+
+  def image_url
+    "#{IMAGE_BASE_URI}/#{self.card_set.image_dir}/#{self.name}.jpg"
+  end
+
   def self.import_from_json(card_data)
     Card.new(name: card_data["name"],
              mana_cost: card_data["manaCost"],

@@ -28,4 +28,9 @@ class CardsetsController < ApplicationController
     flash[:notice] = "New Set Import #{@set.name} was successful." if @set.persisted?
     redirect_to root_path
   end
+
+  def show
+    @cardset = CardSet.find_by!(code: params[:id])
+    render :show
+  end
 end
