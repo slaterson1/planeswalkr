@@ -1,5 +1,7 @@
 class Card < ActiveRecord::Base
   belongs_to :card_set
+  validates :card_number, :presence, uniqueness: true
+  validates :name, :presence, uniqueness: true
 
   IMAGE_BASE_URI = "https://s3.amazonaws.com/images.planeswalker.io"
 
