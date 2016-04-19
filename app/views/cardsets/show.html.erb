@@ -4,14 +4,12 @@
 
 <ul class="card-images">
 	<div class="row">
-		<div class="col s6"></div>
 		  <% @cardset.cards.each do |card| %>
-		    <li class="card-image">
-		        <%= image_tag(card.image_url) %>
-		    </li>
+			    <li class="responsive-img col s4">
+			        <%= image_tag(card.image_url) %>
+			    </li>
 		  <% end %>
-	  </div>
-  <div>
+  	<div>
 </ul>
 
 <%= link_to("Homepage", root_path) %>
