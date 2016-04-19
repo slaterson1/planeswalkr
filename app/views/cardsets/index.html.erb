@@ -1,9 +1,9 @@
 <h1>Card Set Index</h1>
 
 <ul class="cardset">
-  <% @cardset.each do |cardset| %>
+  <% @cardsets.each do |cardset| %>
     <li class="cardset">
-        <%= cardset.name %>
+        CARD SET: <%= link_to("#{cardset.name}", cardset_path(cardset.code))%>
     </li>
   <% end %>
 </ul>

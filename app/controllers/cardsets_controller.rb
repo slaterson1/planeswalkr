@@ -30,7 +30,7 @@ class CardsetsController < ApplicationController
   end
 
   def index
-    @cardset = CardSet.all
+    @cardsets = CardSet.all
     render :index
   end
 
