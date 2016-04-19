@@ -4,7 +4,12 @@
   <% @cardsets.each do |cardset| %>
     <li class="cardset">
         CARD SET: <%= link_to("#{cardset.name}", cardset_path(cardset.code))%>
+        <ul><i>
+          <li>SET TYPE: <%= cardset.set_type %></li>
+          <li>RELEASE DATE: <%= cardset.release_date %></li></i>
+      </ul>
     </li>
+    <p>
   <% end %>
 </ul>
 
