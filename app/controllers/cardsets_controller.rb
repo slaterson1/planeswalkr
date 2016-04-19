@@ -24,10 +24,14 @@ class CardsetsController < ApplicationController
         Card.import_from_json(card)
       end
       @set.cards = @cards
-      @set.save
+      if @set.persisted?
+        flash[:notice] = "New Set Import #{@set.name} was successful." 
+        redirect_to root_path
+      else
+        flash[:notice] = "Import #{@set.name} Failed. Your Set is either non-existent or a duplicate."
+        redirect :new
+      end
     end
-    flash[:notice] = "New Set Import #{@set.name} was successful." if @set.persisted?
-    redirect_to root_path
   end
 
   def index
