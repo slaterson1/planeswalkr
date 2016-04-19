@@ -33,5 +33,6 @@ class CardsetsController < ApplicationController
   def show
     @cardset = CardSet.find_by!(code: params[:id])
     @cards = @cardset.cards.page(params[:page]).per(15)
+    render :show
   end
 end
