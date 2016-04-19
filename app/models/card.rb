@@ -1,6 +1,12 @@
 class Card < ActiveRecord::Base
   belongs_to :card_set
 
+  include PgSearch
+  multisearchable :against => [ :name, :mana_cost, :converted_cost, 
+                                :card_type, :rarity, :text, :flavor, 
+                                :artist, :power, :toughness, :card_number, 
+                                :colors ]
+
   IMAGE_BASE_URI = "https://s3.amazonaws.com/images.planeswalker.io"
 
   def image_url
