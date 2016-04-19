@@ -1,1 +1,31 @@
 @import "materialize";
+
+
+
+/******************************
+SIDEBAR
+******************************/
+
+.sidebar-top {
+	float: left;
+	padding-left: 50px;
+	margin-right: 2%;
+	width: 25%;
+	
+}
+
+.menu-sidebar {
+	background-color: white;
+	border: 2px solid #ecf0f1;
+	height: 2200px;
+	padding: 10px;
+
+}
+
+.menu-items {
+	color: #019FCE;
+}
+
+.yield {
+	float: left;
+}
