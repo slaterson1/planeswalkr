@@ -17,8 +17,9 @@
 		      <!-- <a href="/" class="brand-logo">Super Rad Nerdy Planeswalkr</a> -->
 		      <ul id="nav-mobile" class="right hide-on-med-and-down">
 		        <li><a href="/">Search Cards</a></li>
-		        <li><a href="/">Decks</a></li>
-		        <li><a href="login">Login/Register</a></li>
+		        <li><%= link_to("Decks", cardsets_path)%></li>
+		        <li><%= link_to("Login/", login_path)%></li>
+            <li><%= link_to("Register", new_user_path)%></li>
 		      </ul>
 	      </div>
       </div>
