@@ -31,6 +31,7 @@ class CardsetsController < ApplicationController
 
   def index
     @cardsets = CardSet.all
+    @cardsets = CardSet.page(params[:page]).per(10)
     render :index
   end
 
