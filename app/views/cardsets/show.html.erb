@@ -1,8 +1,10 @@
 <h1><%= @cardset.name %></h1>
 
+
+
 <ul class="card-images">
   <% @cards.each do |card| %>
-    <li class="card-image">
+    <li class="responsive-img col s4">
         <%= image_tag(card.image_url) %>
     </li>
   <% end %>
