@@ -3,14 +3,14 @@
 
 
 <ul class="card-images">
-	<div class="row">
-		  <% @cardset.cards.each do |card| %>
-			    <li class="responsive-img col s4">
-			        <%= image_tag(card.image_url) %>
-			    </li>
-		  <% end %>
-  	<div>
+  <% @cards.each do |card| %>
+    <li class="responsive-img col s4">
+        <%= image_tag(card.image_url) %>
+    </li>
+  <% end %>
 </ul>
+
+<%= paginate @cards %>
 
 <%= link_to("Homepage", root_path) %>
 

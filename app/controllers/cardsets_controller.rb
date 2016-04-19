@@ -18,7 +18,8 @@ class CardsetsController < ApplicationController
                          set_type: data["type"],
                          code: data["code"],
                          release_date: DateTime.parse(data["releaseDate"]),
-                         block: data["block"])
+                         block: data["block"],
+                         image_dir: params[:image_dir])
       @cards = data["cards"].map do |card|
         Card.import_from_json(card)
       end
@@ -36,6 +37,7 @@ class CardsetsController < ApplicationController
 
   def show
     @cardset = CardSet.find_by!(code: params[:id])
+    @cards = @cardset.cards.page(params[:page]).per(15)
     render :show
   end
 end
