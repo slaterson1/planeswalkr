@@ -1,0 +1,11 @@
+<h1>Card Set Index</h1>
+
+<ul class="cardset">
+  <% @cardset.each do |cardset| %>
+    <li class="cardset">
+        <%= cardset.name %>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to("Homepage", root_path) %>
