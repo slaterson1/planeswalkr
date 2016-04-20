@@ -52,15 +52,15 @@ SIDEBAR
 	height:100vh;
 
 }
+
 .valign-wrapper {
 	display: inline-block;
 		width: inherit;
 }
+
 .valign-wrapper.container.card-images ul{
 	display: inline-block;
 	-webkit-padding-start: 10px;
-
-}
 
 .responsive-img img{
 	width:200px;
@@ -72,11 +72,10 @@ SIDEBAR
 	// display:flex;
 	// flex-wrap:wrap;
 }
+
 li.responsive-img.col.s4 {
 	width: auto;
-	display: inline-block;
 }
-
 
 nav.pagination{
 	position:absolute;
