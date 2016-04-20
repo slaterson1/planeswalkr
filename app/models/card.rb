@@ -1,8 +1,8 @@
 class Card < ActiveRecord::Base
   belongs_to :card_set
-  validates :card_number, :presence, uniqueness: true
-  validates :name, :presence, uniqueness: true
-
+  validates_presence_of :name, :multiverse_id
+  validates :multiverse_id, uniqueness: true
+  
   IMAGE_BASE_URI = "https://s3.amazonaws.com/images.planeswalker.io"
 
   def image_url
@@ -21,6 +21,7 @@ class Card < ActiveRecord::Base
              power: card_data["power"],
              toughness: card_data["toughness"],
              card_number: card_data["mciNumber"],
-             colors: card_data["colors"])
+             colors: card_data["colors"],
+             multiverse_id: card_data["multiverseid"])
   end
 end
