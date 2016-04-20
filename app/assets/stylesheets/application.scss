@@ -1,7 +1,5 @@
 @import "materialize";
 
-
-
 /******************************
 SIDEBAR
 // ******************************/
@@ -61,6 +59,7 @@ SIDEBAR
 .valign-wrapper.container.card-images ul{
 	display: inline-block;
 	-webkit-padding-start: 10px;
+}
 
 .responsive-img img{
 	width:200px;
@@ -69,8 +68,6 @@ SIDEBAR
 	margin-bottom:15px;
 	-webkit-padding-start: 10px;
 
-	// display:flex;
-	// flex-wrap:wrap;
 }
 
 li.responsive-img.col.s4 {
@@ -81,11 +78,7 @@ nav.pagination{
 	position:absolute;
 	bottom:0;
 	right:0;
-
 }
-
-// nav.pagination a{
-// 	position:absolute;
-// 	right:100px;;
-// 	width: 20%;
-// }
+.container {
+	padding-bottom: 50px;
+}
