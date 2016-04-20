@@ -15,8 +15,6 @@ Rails.application.routes.draw do
 
   resources :cardsets, only: [:new, :create, :index, :show]
 
-  resources :deck_cards
-
   resources :decks
 
 
