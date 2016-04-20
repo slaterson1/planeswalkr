@@ -11,6 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
 ActiveRecord::Schema.define(version: 20160420191319) do
 
   # These are extensions that must be enabled in order to support this database
@@ -45,6 +46,14 @@ ActiveRecord::Schema.define(version: 20160420191319) do
     t.text     "colors",                      array: true
     t.integer  "subtypes",                    array: true
     t.text     "supertypes",                  array: true
+  end
+
+  create_table "deck_cards", force: :cascade do |t|
+    t.integer  "deck_id"
+    t.integer  "card_id"
+    t.integer  "quantity"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "decks", force: :cascade do |t|
