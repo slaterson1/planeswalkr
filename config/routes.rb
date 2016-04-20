@@ -7,7 +7,9 @@ Rails.application.routes.draw do
 
   root to: "users#index"
 
-  resources :users, only: [:new, :create]
+  resources :users, only: [:new, :create] do
+    resources :decks
+  end
 
   get "/login", to: "sessions#new"
   post "/login", to: "sessions#create"
@@ -15,7 +17,9 @@ Rails.application.routes.draw do
 
   resources :cardsets, only: [:new, :create, :index, :show]
 
+
   resources :decks
+
 
 
   # Example of regular route:
