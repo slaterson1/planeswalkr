@@ -1,11 +1,10 @@
 class Card < ActiveRecord::Base
   belongs_to :card_set
 
-  include PgSearch
-  multisearchable :against => [ :name, :mana_cost, :converted_cost, 
-                                :card_type, :rarity, :text, :flavor, 
-                                :artist, :power, :toughness, :card_number, 
-                                :colors ]
+  # include PgSearch
+
+  # pg_search_scope :search_by_name, :against => :name
+  # pg_search_scope :search_by_mana_cost, :against => :mana_cost
 
   IMAGE_BASE_URI = "https://s3.amazonaws.com/images.planeswalker.io"
 
