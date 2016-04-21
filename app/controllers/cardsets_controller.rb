@@ -27,9 +27,11 @@ class CardsetsController < ApplicationController
       @set.save
     end
     if @set.persisted?
-      flash[:notice] = "New Set Import #{@set.name} was successful." 
-    else 
-      flash[:notice] = "Failed to import."
+      flash[:notice] = "New Set Import #{@set.name} was successful."
+    else
+      set_errors = @set.errors.full_messages.uniq.join(", ")
+      card_errors = @set.cards.flat_map { |x| x.errors.full_messages }.uniq
+      flash[:notice] = "Failed to import. Set errors include '#{set_errors}' and card errors included '#{card_errors}'."
     end
     redirect_to root_path
   end
