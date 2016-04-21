@@ -43,6 +43,8 @@ ActiveRecord::Schema.define(version: 20160420191835) do
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
     t.text     "colors",                      array: true
+    t.integer  "subtypes",                    array: true
+    t.text     "supertypes",                  array: true
     t.integer  "multiverse_id"
   end
 
