@@ -1,0 +1,26 @@
+<h1>Listing Search Results</h1>
+
+
+<table>
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Colors</th>
+			<th>Type</th>
+			<th>Converted Mana Cost</th>
+		</tr>
+	</thead>
+
+	<tbody>
+		<tr>
+		
+			<% @card.each do |card| %>
+				<td><%= card.name %></td> 
+				<td><%= card.colors %></td> 
+				<td><%= card.card_type %></td> 
+				<td><%= card.mana_cost %></td>
+
+			<% end %>	
+		</tr>
+	</tbody>
+</table>

@@ -45,6 +45,7 @@ ActiveRecord::Schema.define(version: 20160420191932) do
     t.text     "colors",                      array: true
     t.integer  "subtypes",                    array: true
     t.text     "supertypes",                  array: true
+    t.integer  "multiverse_id"
   end
 
   create_table "deck_cards", force: :cascade do |t|
