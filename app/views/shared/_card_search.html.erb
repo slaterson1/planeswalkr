@@ -1,0 +1,21 @@
+<%= form_tag(card_search_path, method: :get) do %>
+
+	<%=check_box_tag 'active'%>
+	<%=label_tag "Name"%>
+	<%=text_field_tag :name%>
+
+ 	<%=check_box_tag 'active'%>
+	<%=label_tag "Converted Cost"%>
+	<%=select_tag :converted_mana_cost, [1,2,3,4,5,6,7,8,9,10]%>
+	
+	<%=check_box_tag 'active'%>
+	<%=label_tag "Type"%>
+	<%=select_tag :card_type, ["Artifact", "Creature", "Enchantment", "Instant", "Land", "Planeswalker", "Sorcery", "Tribal", "Plane", "Plane", "Scheme", "Vanguard", "Phenomenon"] %>
+
+	<%=check_box_tag 'active'%>
+	<%=label_tag "Text"%>
+	<%=text_field_tag :text %>
+
+	<%= button_tag "Submit" %>
+	
+<% end %>

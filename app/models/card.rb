@@ -3,6 +3,11 @@ class Card < ActiveRecord::Base
   validates_presence_of :name, :multiverse_id, :type, :card_set_id
   validates :multiverse_id, uniqueness: true
 
+  # include PgSearch
+
+  # pg_search_scope :search_by_name, :against => :name
+  # pg_search_scope :search_by_mana_cost, :against => :mana_cost
+
   IMAGE_BASE_URI = "https://s3.amazonaws.com/images.planeswalker.io"
   BASIC_LANDS = ["Island", "Forest", "Mountain", "Plains", "Swamp"]
 
