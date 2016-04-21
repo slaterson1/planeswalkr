@@ -1,5 +1,4 @@
-<h1>Listing Search Results</h1>
-
+<h1>Search Results</h1>
 
 <table>
 	<thead>
@@ -13,14 +12,13 @@
 
 	<tbody>
 		<tr>
-		
-			<% @card.each do |card| %>
-				<td><%= card.name %></td> 
-				<td><%= card.colors %></td> 
-				<td><%= card.card_type %></td> 
-				<td><%= card.mana_cost %></td>
-
-			<% end %>	
+      <!-- Add hover effects on the table rows to display the card image! -->
+			<% @cards.each do |card| %>
+				<td><%= card.name %></td>
+				<td><%= card.colors.join(", ") %></td>
+				<td><%= card.card_type %></td>
+				<td><%= card.converted_cost %></td>
+			<% end %>
 		</tr>
 	</tbody>
 </table>
