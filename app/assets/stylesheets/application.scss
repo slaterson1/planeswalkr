@@ -1,7 +1,5 @@
 @import "materialize";
 
-
-
 /******************************
 SIDEBAR
 // ******************************/
@@ -15,10 +13,11 @@ SIDEBAR
 
 
 .sidebar-top {
-	float: left;
+	// float: left;
+	position: absolute;
 	padding-left: 50px;
 	margin-right: 2%;
-	width: 25%;
+	width: 25vw;
 
 }
 
@@ -35,8 +34,9 @@ SIDEBAR
 }
 
 .yield {
+	// display: inline-block;
 	margin-left: auto;
-	width: 100vw;
+	width: 70vw;
 	position:relative;
 
 	// float: left;
@@ -50,9 +50,12 @@ SIDEBAR
 	height:100vh;
 
 }
+
 .valign-wrapper {
 	display: inline-block;
+		width: inherit;
 }
+
 .valign-wrapper.container.card-images ul{
 	display: inline-block;
 	-webkit-padding-start: 10px;
@@ -65,10 +68,7 @@ SIDEBAR
 	margin-bottom:15px;
 	-webkit-padding-start: 10px;
 
-	// display:flex;
-	// flex-wrap:wrap;
 }
-
 
 li.responsive-img.col.s4 {
 	width: auto;
@@ -78,12 +78,7 @@ nav.pagination{
 	position:absolute;
 	bottom:0;
 	right:0;
-
-
 }
-
-// nav.pagination a{
-// 	position:absolute;
-// 	right:100px;;
-// 	width: 20%;
-// }
+.container {
+	padding-bottom: 50px;
+}
