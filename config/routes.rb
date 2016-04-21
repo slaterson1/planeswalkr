@@ -18,6 +18,7 @@ Rails.application.routes.draw do
   resources :cardsets, only: [:new, :create, :index, :show]
 
   get "cards/search", to: "search#card_search", as: "card_search"
+  get "decks", to: "decks#all_decks", as: "all_decks"
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
