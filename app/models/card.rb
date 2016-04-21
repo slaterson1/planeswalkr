@@ -1,5 +1,7 @@
 class Card < ActiveRecord::Base
   belongs_to :card_set
+  validates_presence_of :name, :multiverse_id, :type, :card_set_id
+  validates :multiverse_id, uniqueness: true
 
   IMAGE_BASE_URI = "https://s3.amazonaws.com/images.planeswalker.io"
   BASIC_LANDS = ["Island", "Forest", "Mountain", "Plains", "Swamp"]
@@ -33,6 +35,7 @@ class Card < ActiveRecord::Base
              power: card_data["power"],
              toughness: card_data["toughness"],
              card_number: match ? match[1] : nil,
-             colors: card_data["colors"])
+             colors: card_data["colors"],
+             multiverse_id: card_data["multiverseid"])
   end
 end
