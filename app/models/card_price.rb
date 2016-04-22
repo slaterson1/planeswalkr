@@ -10,6 +10,8 @@ class Prices
 		set_name = card_sets.name
 		set_html = HTTParty.get(http://mtgjson.com/sets/"#{'set_name'}".html)
 		# LOST!!!!!!!!! HELP MEEEEE!!!!!!!!!!!!
+		set_url = Nokogiri::HTML(set_html)
+		set_url.xpath("//a[contains(@href, 'info')]/@href")
 	end	
 
 	def get_price(card)
