@@ -173,6 +173,7 @@ DEPENDENCIES
   jquery-rails
   kaminari
   materialize-sass
+  nokogiri
   pg
   pg_search
   pry
